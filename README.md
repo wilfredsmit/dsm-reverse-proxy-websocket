@@ -1,7 +1,7 @@
 # dsm-reverse-proxy-websocket
-Configuration fix for Synology DSM 6 reverse proxy to handle websocket
+Configuration fix for Synology DSM 6.x reverse proxy to handle websocket
 
-**BACKUP YOUR `portal.mustache` BEFORE MODIFYING IT!**
+**BACKUP YOUR `Portal.mustache` BEFORE MODIFYING IT!**
 
 You need to edit the file `sudo vi /usr/syno/share/nginx/Portal.mustache` to add the followings in the `Location` section:
 
@@ -19,7 +19,7 @@ sudo synoservicecfg --restart nginx
 *This will restart ALL http service running, not only reverse proxy, as a single instance of NGinX runs everything.*
 
 
-A modified `Portal.mustache` is provided in this repo (warning: based on DSM 6.1.6-15266).
+A modified `Portal.mustache` is provided in this repo (warning: based on DSM 6.2-23739).
 
 # Known DSM upgrade impacts on the `Portal.mustache` file
 
