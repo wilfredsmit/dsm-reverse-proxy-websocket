@@ -1,5 +1,10 @@
 # dsm-reverse-proxy-websocket
-Configuration fix for Synology DSM 6.x reverse proxy to handle websocket
+Configuration fix for Synology DSM 6 reverse proxy to handle websocket
+
+Starting from DSM 6.2.1, this modification is no longer required, as Application Portail has an option to handle websocket.
+It's even not recommended to modify your Portal.mustache file, as it will cause error when adding or edition reverse proxy entries in Application Portal.
+
+In DSM 6.2.1+, when editing a reverse proxy entry in Application Portal, go to "custom headers" tab and click the arrow on the "Create" button, then "Websocket". This will add the required headers for websocket to this reverse proxy.
 
 **BACKUP YOUR `Portal.mustache` BEFORE MODIFYING IT!**
 
